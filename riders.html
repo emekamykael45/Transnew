@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Send Me | Business Reports</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!--Font Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!--Semantics CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/riders.css"/>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navbar Starts Here -->
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="images/menu.png"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample08">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="overview.html" class="nav-link overview"><img>Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reports.html" class="nav-link reports"><img>Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="riders.html" class="nav-link riders active"><img>Riders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link users"><img>Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tracker.html" class="nav-link tracker"><img>TRACKER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="crm.html" class="nav-link crm"><img>CRM</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="username"><img src="images/account-img-circle.png">Michael Miles</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                          <a class="dropdown-item" href="sign-in.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Ends Here -->
+
+        <div class="main">
+            
+            <p class="head-text">Riders</p>
+
+            <div class="new-rider">
+                <p data-toggle="modal" data-target="#exampleModalCenter1" class="new-rider-link">New Rider</p>
+            </div>
+
+            <div class="modal fade question" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span>Create Rider</span>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>You  are about to create a Rider account with username <strong>Muve15</strong> and Password as <strong>rideraccess13</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
+                            <button type="button" class="btn btn-primary create-btn" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2">YES, CREATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade success" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/check-gre-img.png">
+                            <p>MUVE 15 has been created Successfully</p>
+                            <a href="rider-report.html" class="btn btn-primary profile-btn">VIEW RIDER PROFILE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-row">
+
+                <div class="left">
+                    <p class="label">From</p>
+                    <div class="field range">
+                        <div class="ui calendar" id="rangestart">
+                            <div class="ui input left icon">
+                                <i class="calendar alternate icon"></i>
+                                <input type="text" placeholder="Date">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="label">To</p>
+                    <div class="field">
+                        <div class="ui calendar" id="rangeend">
+                            <div class="ui input left icon">
+                                <i class="calendar alternate icon"></i>
+                                <input type="text" placeholder="Date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="field first">
+                        <select class="ui fluid dropdown">
+                            <option value="">State</option>
+                            <option value="AL">Lagos</option>
+                            <option value="AK">Imo</option>
+                            <option value="AZ">Benin</option>
+                            <option value="AR">Abuja</option>
+                            <option value="AR">P/Hacourt</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select class="ui fluid dropdown">
+                            <option value="">Region</option>
+                            <option value="AL">East</option>
+                            <option value="AK">West</option>
+                            <option value="AZ">North</option>
+                            <option value="AR">South</option>
+                            <option value="AR">S/West</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="search">
+                    <img src="images/search-icon.png">
+                    <input id="myInput" type="text" name="search" placeholder="Search Destination & Location">
+                </div>
+
+            </div>
+
+            <div class="table-responsive">
+                <table id="example" class="table">
+                    <thead>
+                        <tr>
+                            <th>Rider</th>
+                            <th>Total Request</th>
+                            <th>Total in Progress</th>
+                            <th>Total Cancelled</th>
+                            <th>Total Revenue</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        <tr>
+                            <td class="first-col">
+                                <img src="images/biker-img.png">
+                                <p>Muve 01</p>
+                            </td>
+                            <td>500</td>
+                            <td>10,000</td>
+                            <td>330,000</td>
+                            <td>100,000</td>
+                            <td><a href="rider-report.html">VIEW</a></td>
+                            <td><span class="deactivate" data-toggle="modal" data-target="#exampleModalCenter3">Deactivate</span></td>
+
+                            <div class="modal fade question" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <span>Deactivate Muve01</span>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to deactivate <strong>Muve15</strong></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
+                                            <button type="button" class="btn btn-primary create-btn" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter4">YES, DEACTIVATE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade success" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/check-gre-img.png">
+                                            <p>MUVE 15 Deactivated Successfully</p>
+                                            <a class="btn btn-primary profile-btn">UNDO DEACTIVATION</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td class="first-col">
+                                <img src="images/biker-img.png">
+                                <p>Muve 01</p>
+                            </td>
+                            <td>500</td>
+                            <td>10,000</td>
+                            <td>330,000</td>
+                            <td>100,000</td>
+                            <td><a href="rider-report.html">VIEW</a></td>
+                            <td><span class="deactivate">Deactivate</span></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">
+                                <img src="images/biker-img.png">
+                                <p>Muve 01</p>
+                            </td>
+                            <td>500</td>
+                            <td>10,000</td>
+                            <td>330,000</td>
+                            <td>100,000</td>
+                            <td><a href="rider-report.html">VIEW</a></td>
+                            <td><span class="reactivate">Reactivate</span></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">
+                                <img src="images/biker-img.png">
+                                <p>Muve 01</p>
+                            </td>
+                            <td>500</td>
+                            <td>10,000</td>
+                            <td>330,000</td>
+                            <td>100,000</td>
+                            <td><a href="rider-report.html">VIEW</a></td>
+                            <td><span class="deactivate">Deactivate</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-footer">
+                <p>Showing <span>1</span> to <span>10</span> of <span>500</span> entries</p>
+
+                <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item" aria-current="page">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+        <!--Dropdown-->
+        <script>
+            $('.ui.dropdown')
+                .dropdown()
+            ;
+
+            $('.ui.accordion')
+                .accordion()
+            ;
+        </script>
+
+        <!--Semantics Date Picker Script-->
+        <script>
+            $('#rangestart').calendar({
+                type: 'date',
+                endCalendar: $('#rangeend')
+            });
+            $('#rangeend').calendar({
+                type: 'date',
+                startCalendar: $('#rangestart')
+            });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

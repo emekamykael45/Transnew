@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Send Me | Overview (request)</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!--Font Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!--Semantics CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/crm.css"/>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navbar Starts Here -->
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="images/menu.png"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample08">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="overview.html" class="nav-link overview"><img>Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reports.html" class="nav-link reports"><img>Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="riders.html" class="nav-link riders"><img>Riders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link users"><img>Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tracker.html" class="nav-link tracker"><img>TRACKER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="crm.html" class="nav-link crm active"><img>CRM</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="username"><img src="images/account-img-circle.png">Michael Miles</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                          <a class="dropdown-item" href="sign-in.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Ends Here -->
+
+        <div class="main">
+            
+            <p class="head-text">CRM</p>
+
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-one" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-one" aria-selected="true">Requests</a>
+                    <a class="nav-item nav-link" id="nav-two" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-two" aria-selected="false">Users</a>
+                    <a class="nav-item nav-link last" id="nav-three" data-toggle="tab" href="#nav-third" role="tab" aria-controls="nav-three" aria-selected="false">Riders</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-one">
+
+                    <div class="info-box">
+                        <div class="nav nav-tabs info-tabs">
+                            <a class="nav-link active first" id="nav-one" data-toggle="tab">Delivered</a>
+                            <a class="nav-link" id="nav-two" data-toggle="tab">Ongoing</a>
+                            <a class="nav-link last" id="nav-three" data-toggle="tab">Cancelled</a>
+                        </div>
+
+                        <div class="box light">
+                            <p class="title">Total Delivered</p>
+                            <p class="fig">5,000</p>
+                        </div>
+
+                        <div class="box dark">
+                            <p class="title">Delivery Today</p>
+                            <p class="fig">1,000</p>
+                        </div>
+                    </div>
+
+                    <div class="filter-row">
+
+                        <div class="left">
+                            <p class="label">From</p>
+                            <div class="field range">
+                                <div class="ui calendar" id="rangestart">
+                                    <div class="ui input left icon">
+                                        <i class="calendar alternate icon"></i>
+                                        <input type="text" placeholder="Date">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="label">To</p>
+                            <div class="field">
+                                <div class="ui calendar" id="rangeend">
+                                    <div class="ui input left icon">
+                                        <i class="calendar alternate icon"></i>
+                                        <input type="text" placeholder="Date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="right">
+                            <img src="images/search-icon.png">
+                            <input id="myInput" type="text" name="search" placeholder="Search Destination & Location">
+                        </div>
+
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table request-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Sender</th>
+                                    <th>Package</th>
+                                    <th>QTY</th>
+                                    <th>Receiver</th>
+                                    <th>Destination</th>
+                                    <th>Rider</th>
+                                    <th>Service type</th>
+                                    <th>Fee</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTable">
+                                <tr>
+                                    <td>02 May, 2016</td>
+                                    <td>John Dumebi</td>
+                                    <td>Shirts</td>
+                                    <td>10</td>
+                                    <td>Alice Waya</td>
+                                    <td>Ilupeji</td>
+                                    <td>Muve 04</td>
+                                    <td>Instant</td>
+                                    <td>N3,000</td>
+                                    <td>
+                                        <div data-toggle="collapse" data-target="#demo1" class="collapsed accordion-toggle">
+                                            <span class="chevron top"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="12" class="hiddenRow">
+                                        <div class="accordian-body collapse" id="demo1">
+                                            <div class="drop-down-det">
+                                                <div class="inner">
+                                                    <p class="contact-text">Sender Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                    <p class="location-text">Lekki Lagos</p>
+                                                </div>
+                                                <div class="inner flex">
+                                                    <img src="images/package-img.png">
+                                                    <img src="images/package-img.png">
+                                                </div>
+                                                <div class="inner flexed">
+                                                    <div class="left">
+                                                        <p class="contact-text">Receiver Contact</p>
+                                                        <div class="phone-num">
+                                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                                            <span>08067710761</span>
+                                                        </div>
+                                                        <p class="location-text">Ilupeju Lagos</p>
+                                                    </div>
+                                                    <img src="images/person-img.png">
+                                                </div>
+                                                <div class="inner">
+                                                    <p class="contact-text">Rider's Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02 May, 2016</td>
+                                    <td>John Dumebi</td>
+                                    <td>Shirts</td>
+                                    <td>10</td>
+                                    <td>Alice Waya</td>
+                                    <td>Ilupeji</td>
+                                    <td>Muve 04</td>
+                                    <td>Instant</td>
+                                    <td>N3,000</td>
+                                    <td>
+                                        <div data-toggle="collapse" data-target="#demo2" class="collapsed accordion-toggle">
+                                            <span class="chevron top"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="12" class="hiddenRow">
+                                        <div class="accordian-body collapse" id="demo2">
+                                            <div class="drop-down-det">
+                                                <div class="inner">
+                                                    <p class="contact-text">Sender Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                    <p class="location-text">Lekki Lagos</p>
+                                                </div>
+                                                <div class="inner flex">
+                                                    <img src="images/package-img.png">
+                                                    <img src="images/package-img.png">
+                                                </div>
+                                                <div class="inner flexed">
+                                                    <div class="left">
+                                                        <p class="contact-text">Receiver Contact</p>
+                                                        <div class="phone-num">
+                                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                                            <span>08067710761</span>
+                                                        </div>
+                                                        <p class="location-text">Ilupeju Lagos</p>
+                                                    </div>
+                                                    <img src="images/person-img.png">
+                                                </div>
+                                                <div class="inner flexed">
+                                                    <div class="left">
+                                                        <p class="contact-text">Rider's Contact</p>
+                                                        <div class="phone-num">
+                                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                                            <span>08067710761</span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="tracker.html"><img src="images/location-img.png"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02 May, 2016</td>
+                                    <td>John Dumebi</td>
+                                    <td>Shirts</td>
+                                    <td>10</td>
+                                    <td>Alice Waya</td>
+                                    <td>Ilupeji</td>
+                                    <td>Muve 04</td>
+                                    <td>Instant</td>
+                                    <td>N3,000</td>
+                                    <td>
+                                        <div data-toggle="collapse" data-target="#demo3" class="collapsed accordion-toggle">
+                                            <span class="chevron top"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="12" class="hiddenRow">
+                                        <div class="accordian-body collapse" id="demo3">
+                                            <div class="drop-down-det">
+                                                <div class="inner">
+                                                    <p class="contact-text">Sender Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                    <p class="location-text">Lekki Lagos</p>
+                                                </div>
+                                                <div class="inner flex">
+                                                    <img src="images/package-img.png">
+                                                    <img src="images/package-img.png">
+                                                </div>
+                                                <div class="inner flexed">
+                                                    <div class="left">
+                                                        <p class="contact-text">Receiver Contact</p>
+                                                        <div class="phone-num">
+                                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                                            <span>08067710761</span>
+                                                        </div>
+                                                        <p class="location-text">Ilupeju Lagos</p>
+                                                    </div>
+                                                    <img src="images/person-img.png">
+                                                </div>
+                                                <div class="inner">
+                                                    <p class="contact-text">Rider's Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02 May, 2016</td>
+                                    <td>John Dumebi</td>
+                                    <td>Shirts</td>
+                                    <td>10</td>
+                                    <td>Alice Waya</td>
+                                    <td>Ilupeji</td>
+                                    <td>Muve 04</td>
+                                    <td>Instant</td>
+                                    <td>N3,000</td>
+                                    <td>
+                                        <div data-toggle="collapse" data-target="#demo4" class="collapsed accordion-toggle">
+                                            <span class="chevron top"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="12" class="hiddenRow">
+                                        <div class="accordian-body collapse" id="demo4">
+                                            <div class="drop-down-det">
+                                                <div class="inner">
+                                                    <p class="contact-text">Sender Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                    <p class="location-text">Lekki Lagos</p>
+                                                </div>
+                                                <div class="inner flex">
+                                                    <img src="images/package-img.png">
+                                                    <img src="images/package-img.png">
+                                                </div>
+                                                <div class="inner flexed">
+                                                    <div class="left">
+                                                        <p class="contact-text">Receiver Contact</p>
+                                                        <div class="phone-num">
+                                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                                            <span>08067710761</span>
+                                                        </div>
+                                                        <p class="location-text">Ilupeju Lagos</p>
+                                                    </div>
+                                                    <img src="images/person-img.png">
+                                                </div>
+                                                <div class="inner">
+                                                    <p class="contact-text">Rider's Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02 May, 2016</td>
+                                    <td>John Dumebi</td>
+                                    <td>Shirts</td>
+                                    <td>10</td>
+                                    <td>Alice Waya</td>
+                                    <td>Ilupeji</td>
+                                    <td>Muve 04</td>
+                                    <td>Instant</td>
+                                    <td>N3,000</td>
+                                    <td>
+                                        <div data-toggle="collapse" data-target="#demo5" class="collapsed accordion-toggle">
+                                            <span class="chevron top"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="12" class="hiddenRow">
+                                        <div class="accordian-body collapse" id="demo5">
+                                            <div class="drop-down-det">
+                                                <div class="inner">
+                                                    <p class="contact-text">Sender Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                    <p class="location-text">Lekki Lagos</p>
+                                                </div>
+                                                <div class="inner flex">
+                                                    <img src="images/package-img.png">
+                                                    <img src="images/package-img.png">
+                                                </div>
+                                                <div class="inner flexed">
+                                                    <div class="left">
+                                                        <p class="contact-text">Receiver Contact</p>
+                                                        <div class="phone-num">
+                                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                                            <span>08067710761</span>
+                                                        </div>
+                                                        <p class="location-text">Ilupeju Lagos</p>
+                                                    </div>
+                                                    <img src="images/person-img.png">
+                                                </div>
+                                                <div class="inner">
+                                                    <p class="contact-text">Rider's Contact</p>
+                                                    <div class="phone-num">
+                                                        <i class="fas fa-phone fa-rotate-90"></i>
+                                                        <span>08067710761</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <p>Showing <span>1</span> to <span>10</span> of <span>500</span> entries</p>
+
+                        <nav aria-label="...">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-two">
+
+                    <div class="info-box users-info-box">
+                        <div class="box light">
+                            <p class="title">All Users</p>
+                            <p class="fig">1,000</p>
+                        </div>
+
+                        <div class="box dark">
+                            <p class="title">Active Users</p>
+                            <p class="fig">800</p>
+                        </div>
+
+                        <div></div>
+                    </div>
+
+                    <div class="filter-row">
+
+                        <div class="right">
+                            <img src="images/search-icon.png">
+                            <input id="myInputTwo" type="text" name="search" placeholder="Search Destination & Location">
+                        </div>
+
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table users-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Cmpleted</th>
+                                    <th>Ongoing</th>
+                                    <th>Cancelled</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTableTwo">
+                                <tr>
+                                    <td>Abiodun Imosun</td>
+                                    <td>abiod.amosun@gmail.com</td>
+                                    <td>100</td>
+                                    <td>2</td>
+                                    <td>10</td>
+                                    <td><a href="users-view.html" class="view-link">VIEW</a></td>
+                                    <td><strong><a href="">Send Mail</a></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Ganiu Michael</td>
+                                    <td>abiod.amosun@gmail.com</td>
+                                    <td>100</td>
+                                    <td>2</td>
+                                    <td>10</td>
+                                    <td><a href="users-view.html" class="view-link">VIEW</a></td>
+                                    <td><strong><a href="">Send Mail</a></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>TY Bello</td>
+                                    <td>abiod.amosun@gmail.com</td>
+                                    <td>100</td>
+                                    <td>2</td>
+                                    <td>10</td>
+                                    <td><a href="users-view.html" class="view-link">VIEW</a></td>
+                                    <td><strong><a href="">Send Mail</a></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Tosin Oladipo</td>
+                                    <td>abiod.amosun@gmail.com</td>
+                                    <td>100</td>
+                                    <td>2</td>
+                                    <td>10</td>
+                                    <td><a href="users-view.html" class="view-link">VIEW</a></td>
+                                    <td><strong><a href="">Send Mail</a></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <p>Showing <span>1</span> to <span>10</span> of <span>500</span> entries</p>
+
+                        <nav aria-label="...">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="nav-third" role="tabpanel" aria-labelledby="nav-three">
+
+                    <div class="info-box users-info-box">
+                        <div class="box light">
+                            <p class="title">All Riders</p>
+                            <p class="fig">400</p>
+                        </div>
+
+                        <div class="box dark">
+                            <p class="title">Active Riders</p>
+                            <p class="fig">389</p>
+                        </div>
+
+                        <div></div>
+                    </div>
+
+                    <div class="filter-row">
+
+                        <div class="right">
+                            <img src="images/search-icon.png">
+                            <input id="myInputThree" type="text" name="search" placeholder="Search Destination & Location">
+                        </div>
+
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table users-table">
+                            <thead>
+                                <tr>
+                                    <th>Rider</th>
+                                    <th>Mobile Number</th>
+                                    <th>Cmpleted</th>
+                                    <th>Pending</th>
+                                    <th>KM Done</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTableThree">
+                                <tr>
+                                    <td class="first-col">
+                                        <img src="images/biker-img.png">
+                                        <p>Muve 01</p>
+                                    </td>
+                                    <td>
+                                        <p class="rider-phone-num">
+                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                            <span>0806 771 0761</span>
+                                        </p>
+                                    </td>
+                                    <td>100</td>
+                                    <td>20</td>
+                                    <td>20,000km</td>
+                                    <td><a href="riders-view.html" class="view-link">VIEW</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">
+                                        <img src="images/biker-img.png">
+                                        <p>Muve 01</p>
+                                    </td>
+                                    <td>
+                                        <p class="rider-phone-num">
+                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                            <span>0806 771 0761</span>
+                                        </p>
+                                    </td>
+                                    <td>150</td>
+                                    <td>10</td>
+                                    <td>20,000km</td>
+                                    <td><a href="riders-view.html" class="view-link">VIEW</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">
+                                        <img src="images/biker-img.png">
+                                        <p>Muve 01</p>
+                                    </td>
+                                    <td>
+                                        <p class="rider-phone-num">
+                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                            <span>0806 771 0761</span>
+                                        </p>
+                                    </td>
+                                    <td>180</td>
+                                    <td>13</td>
+                                    <td>20,000km</td>
+                                    <td><a href="riders-view.html" class="view-link">VIEW</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">
+                                        <img src="images/biker-img.png">
+                                        <p>Muve 01</p>
+                                    </td>
+                                    <td>
+                                        <p class="rider-phone-num">
+                                            <i class="fas fa-phone fa-rotate-90"></i>
+                                            <span>0806 771 0761</span>
+                                        </p>
+                                    </td>
+                                    <td>90</td>
+                                    <td>12</td>
+                                    <td>20,000km</td>
+                                    <td><a href="riders-view.html" class="view-link">VIEW</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <p>Showing <span>1</span> to <span>10</span> of <span>500</span> entries</p>
+
+                        <nav aria-label="...">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--Dropdown-->
+        <script>
+            $('.ui.dropdown')
+                .dropdown()
+            ;
+
+            $('.ui.accordion')
+                .accordion()
+            ;
+        </script>
+
+        <!--Semantics Date Picker Script-->
+        <script>
+            $('#rangestart').calendar({
+                type: 'date',
+                endCalendar: $('#rangeend')
+            });
+            $('#rangeend').calendar({
+                type: 'date',
+                startCalendar: $('#rangestart')
+            });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+
+            $(document).ready(function(){
+              $("#myInputTwo").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTableTwo tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+
+            $(document).ready(function(){
+              $("#myInputThree").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTableThree tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

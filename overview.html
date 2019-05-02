@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Send Me | Overview (request)</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!--Font Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!--Semantics CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/overview.css"/>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    </head>
+
+    <body>
+
+        <!-- Navbar Starts Here -->
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="images/menu.png"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample08">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="overview.html" class="nav-link overview active"><img>Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reports.html" class="nav-link reports"><img>Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="riders.html" class="nav-link riders"><img>Riders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link users"><img>Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tracker.html" class="nav-link tracker"><img>TRACKER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="crm.html" class="nav-link crm"><img>CRM</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="username"><img src="images/account-img-circle.png">Michael Miles</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                          <a class="dropdown-item" href="sign-in.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Ends Here -->
+
+        <div class="main">
+            
+            <p class="head-text">Overview</p>
+
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-one" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-one" aria-selected="true">General Overview</a>
+                    <a class="nav-item nav-link" id="nav-two" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-two" aria-selected="false">Revenue Overview</a>
+                    <a class="nav-item nav-link last" id="nav-three" data-toggle="tab" href="#nav-third" role="tab" aria-controls="nav-three" aria-selected="false">Riders Overview</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-one">
+
+                    <div class="info-boxes">
+                        
+                        <div class="info-box">
+                            <p class="title">Total Number of Trips</p>
+                            <p class="fig">3000</p>
+
+                            <hr>
+
+                            <div class="graph-info">
+                                <div class="left">
+                                    <p><i class="fas fa-circle first"></i>3000 Number of Trips</p>
+                                    <p><i class="fas fa-circle second"></i>2800 Completed Trips</p>
+                                    <p><i class="fas fa-circle third"></i>200 Cancelled Trips</p>
+                                </div>
+                                <div class="graph" id="chartTrips">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <p class="title">Revenue Today</p>
+                            <p class="fig">N1,000</p>
+
+                            <hr>
+
+                            <div class="graph-info">
+                                <div class="left">
+                                    <p><i class="fas fa-circle first"></i>N10,000 Total Revenue</p>
+                                    <p><i class="fas fa-circle second"></i>N1,000 Revenue Today</p>
+                                </div>
+                                <div class="graph" id="chartRevenue">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <p class="title">Total Active Riders</p>
+                            <p class="fig">2800</p>
+
+                            <hr>
+
+                            <div class="graph-info">
+                                <div class="left">
+                                    <p><i class="fas fa-circle first"></i>3000 All Riders</p>
+                                    <p><i class="fas fa-circle second"></i>2800 Active Riders</p>
+                                </div>
+                                <div class="graph" id="chartRiders">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <p class="title">Total Active Staffs</p>
+                            <p class="fig">20</p>
+
+                            <hr>
+
+                            <div class="graph-info">
+                                <div class="left">
+                                    <p><i class="fas fa-circle first"></i>50 Total Staffs</p>
+                                    <p><i class="fas fa-circle second"></i>20 Active Staffs</p>
+                                </div>
+                                <div class="graph" id="chartStaffs">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-two">
+
+                    <div class="tabs-div">
+                        <div class="left">
+                            
+                            <div class="graph">
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+                            
+                            <div class="box box-one">
+                                <p class="title">Total Revenue Overtime</p>
+                                <p class="fig">N100,000</p>
+                            </div>
+
+                            <div class="box">
+                                <p class="title">Total Revenue Today</p>
+                                <p class="fig">N5,000</p>
+                            </div>
+
+                            <div class="box">
+                                <p class="title">Average Revenue Per Trip</p>
+                                <p class="fig">N1,000</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="nav-third" role="tabpanel" aria-labelledby="nav-three">
+
+                    <div class="tabs-div riders-div">
+                        <div class="left">
+                            
+                            <div class="graph">
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+                            
+                            <div class="box box-one">
+                                <p class="title">Total Bikes</p>
+                                <p class="fig">700</p>
+                            </div>
+
+                            <div class="box">
+                                <p class="title">Total Available Today</p>
+                                <p class="fig">600</p>
+                            </div>
+
+                            <div class="box">
+                                <p class="title">Total Delivery Time</p>
+                                <div class="fig-div">
+                                    <p class="fig">34hrs</p>
+                                    <p class="percentage">60%</p>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <p class="title">Total Distance Covered</p>
+                                <div class="fig-div">
+                                    <p class="fig">34hrs</p>
+                                    <p class="percentage">30%</p>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <p class="title">Average Delivery Time Per Rider</p>
+                                <p class="fig">45 Mins</p>
+                            </div>
+
+                            <div class="box">
+                                <p class="title">Average Distance Covered Per Rider</p>
+                                <p class="fig">30 KM</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Trips Graph-->
+        <script>
+            var colors = ['#0FB0F5', '#0DE43D', '#F23C3C'];
+            var options = {
+                chart: {
+                    type: 'donut',
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                series: [3000, 2800, 200],
+                labels: ['Total', 'Completed', 'Cancelled'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200
+                        },
+                        legend: {
+                            show: false
+                        }
+                    }
+                }],
+                colors: colors,
+                legend: {
+                    show: false
+                }
+            }
+
+            var chart = new ApexCharts(
+                document.querySelector("#chartTrips"),
+                options
+            );
+
+            chart.render()
+        </script>
+
+        <!-- Revenue Graph-->
+        <script>
+            var colors = ['#0FB0F5', '#0DE43D'];
+            var options = {
+                chart: {
+                    type: 'donut',
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                series: [10000, 1000],
+                labels: ['Total', 'Today'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200
+                        },
+                        legend: {
+                            show: false
+                        }
+                    }
+                }],
+                colors: colors,
+                legend: {
+                    show: false
+                }
+            }
+
+            var chart = new ApexCharts(
+                document.querySelector("#chartRevenue"),
+                options
+            );
+
+            chart.render()
+        </script>
+
+        <!-- Riders Graph-->
+        <script>
+            var colors = ['#0FB0F5', '#0DE43D'];
+            var options = {
+                chart: {
+                    type: 'donut',
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                series: [3000, 2800],
+                labels: ['All', 'Active'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200
+                        },
+                        legend: {
+                            show: false
+                        }
+                    }
+                }],
+                colors: colors,
+                legend: {
+                    show: false
+                }
+            }
+
+            var chart = new ApexCharts(
+                document.querySelector("#chartRiders"),
+                options
+            );
+
+            chart.render()
+        </script>
+
+        <!-- Staffs Graph-->
+        <script>
+            var colors = ['#0FB0F5', '#0DE43D'];
+            var options = {
+                chart: {
+                    type: 'donut',
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                series: [50, 20],
+                labels: ['Total', 'Active'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200
+                        },
+                        legend: {
+                            show: false
+                        }
+                    }
+                }],
+                colors: colors,
+                legend: {
+                    show: false
+                }
+            }
+
+            var chart = new ApexCharts(
+                document.querySelector("#chartStaffs"),
+                options
+            );
+
+            chart.render()
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

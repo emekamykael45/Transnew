@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline:none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+a:focus,
+button:focus,
+input:focus,
+input:active,
+textarea:focus,
+.form-control:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+input:focus,
+input:active {
+    border: 1px solid #6CB525 !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    background: #FFFFFF;
+    transition: .5s;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 350px;
+    padding: 30px 10px;
+    text-align: center;
+    border-top: 3px solid #6CB525;
+}
+
+.main .head-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.main .sub-head-text {
+    margin: 0;
+}
+
+.main .amount-div {
+    margin: 40px auto;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    font-size: 2.8em;
+    font-weight: bold;
+    background: #F3F9EC;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    color: #6CB536;
+}
+
+.main .amount-div p {
+    font-size: 0.6em !important;
+    font-weight: 400 !important;
+    margin: 0;
+    margin-right: 3px;
+    margin-top: -8px;
+}
+
+.main .pay-now-link {
+    color: #FFFFFF;
+}
+
+.main .pay-now {
+    margin: 0 auto;
+    width: 90%;
+    padding: 12px;
+    border-radius: 20px;
+    background: #6CB536;
+    font-weight: bold;
+}
+
+.main .powered-by {
+    color: #ccc;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+
+
+
+/* Responsive Starts Here */
+
+@media screen and (max-width: 370px){
+    .main {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 327px){
+    .main .amount-div {
+        width: 150px;
+        height: 150px;
+    }
+}

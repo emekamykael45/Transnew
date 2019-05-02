@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline:none !important
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    background: #FFF;
+}
+
+/*Section 1 Starts Here*/
+.main{
+    margin: 0 auto;
+    padding: 45px 35px;
+    background: #EBEBEB;
+    width: 600px;
+}
+
+.main .email-content{
+    background: #FFF;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.email-content .logo-div{
+    margin: 0 auto;
+    padding: 30px 0px;
+    width: 90px;
+}
+
+.logo-div .logo{
+    width: 90px;
+}
+
+.email-content .header{
+    background: #6CB525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.header img{
+    width: 27px;
+    margin-right: 8px;
+}
+
+.header p{
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 0.1px;
+    margin-top: 17px;
+}
+
+.email-content .container{
+    width: 80%;
+}
+
+.container .hi-text{
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.container .info-text{
+    color: #333333;
+}
+
+.container .order-info-div{
+    margin: 0 auto;
+    width: 65%;
+    padding: 12px;
+    padding-bottom: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+}
+
+.order-info-div .top{
+    display: flex;
+    margin-left: 20px;
+}
+
+.order-info-div .top img{
+    width: 25px;
+    height: 25px;
+    margin-right: 14px;
+}
+
+.order-info-div .top p{
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+.order-info-div hr{
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.order-info-div .content{
+    margin-left: 20px;
+}
+
+.order-info-div .content .row{
+    display: flex;
+    margin-bottom: 18px;
+    letter-spacing: 0.04em;
+}
+
+.content .row .left{
+    display: block;
+}
+
+.order-info-div .content .left img{
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+}
+
+.content .left img.dashed-line-img{
+    width: 2px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 9px;
+}
+
+.order-info-div .content .right{
+    display: block;
+}
+
+.content .right .light-text{
+    color: #A59D9D;
+    font-size: 0.8em;
+    margin-bottom: 2px;
+}
+
+.content .right .light-text.bold{
+    font-weight: 600;
+}
+
+.content .right .bold-text{
+    color: #4B575C;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.content .right .item-div{
+    display: flex;
+    margin-top: 15px;
+}
+
+.content .right .item-div img{
+    width: 30px;
+    height: 21px;
+    margin-right: 10px;
+}
+
+.content .right .item-div p{
+    color: #A59D9D;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+.content .right .price{
+    letter-spacing: 0.04em;
+    color: #4B575C;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.container .if-you-have-text{
+    margin-top: 40px;
+    line-height: 24px;
+    color: #797777;
+    font-size: 0.9em;
+}
+
+.container .cheers{
+    color: #333333;
+    font-weight: bold;
+}
+
+.main .footer{
+    margin-top: 40px;
+    padding: 40px 0px;
+    padding-bottom: 0px;
+    background: #EBEBEB;
+    text-align: center;
+}
+
+.main .footer .icons{
+    margin-bottom: 15px;
+}
+
+.main .footer .icons a{
+    margin-right: 20px;
+}
+.main .footer .icons a.twitter-link{
+    margin-right: 0px;
+}
+
+.main .footer .icons a img.instagram{
+    width: 16px;
+    height: 16px;
+}
+.main .footer .icons a img.facebook{
+    width: 8px;
+    height: 16px;
+}
+.main .footer .icons a img.twitter{
+    width: 19px;
+    height: 16px;
+}
+
+.main .footer .copyright, .address{
+    background: #EBEBEB;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+}
+.main .footer .address{
+    margin-bottom: 0px;
+}
+
+
+
+/* Responsive Starts Here */
+
+@media screen and (max-width: 600px){
+    .main{
+        width: 95%;
+    }
+}
