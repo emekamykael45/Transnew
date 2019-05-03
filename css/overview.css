@@ -321,6 +321,7 @@ body {
 .left .graph {
     background:  #FFFFFF;
     height: 350px;
+    padding-top: 10px;
 }
 
 .tabs-div .right {
