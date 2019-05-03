@@ -351,13 +351,37 @@ body {
     padding: 0;
     background: none;
     border: none;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     cursor: pointer;
+    border-radius: 50%;
 }
 
-.rider-row .track button img {
-    width: 30px;
-    height: 30px;
+.rider-row .track button i {
+    font-size: 1.4em;
+    padding: 6.5px 8px;
+    color: #81BE45;
+    background: rgba(129, 190, 69, 0.1);
+    border-radius: 50%;
+}
+
+.rider-row .track button:hover {
+    background: #81BE45;
+    opacity: .8;
+}
+.rider-row .track button:hover i {
+    color: #FFFFFF;
+}
+
+.rider-row .track button.marker-active:hover {
+    opacity: 1;
+}
+
+.marker-active {
+    background: #81BE45 !important;
+}
+
+.marker-active i {
+    color: #FFFFFF !important;
 }
 
 .rider-row .track a {
@@ -385,7 +409,7 @@ body {
     padding: 0;
 }
 
-.main-page-content .map {
+.main-page-content #map {
     width: 100%;
     height: 92.5vh;
 }

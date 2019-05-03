@@ -27,6 +27,7 @@
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     </head>
 
     <body>
@@ -117,8 +118,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="track">
-                    <button class="button"><img src="images/location-img.png"></button>
+                <div id="track" class="track">
+                    <button class="button location-icon"><i class="fas fa-map-marker-alt"></i></button>
                     <a href="rider-report.html">VIEW</a>
                 </div>
             </div>
@@ -142,8 +143,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="track">
-                    <button class="button"><img src="images/location-img.png"></button>
+                <div id="track" class="track">
+                    <button class="button location-icon"><i class="fas fa-map-marker-alt"></i></button>
                     <a href="rider-report.html">VIEW</a>
                 </div>
             </div>
@@ -167,8 +168,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="track">
-                    <button class="button"><img src="images/location-img.png"></button>
+                <div id="track" class="track">
+                    <button class="button location-icon"><i class="fas fa-map-marker-alt"></i></button>
                     <a href="rider-report.html">VIEW</a>
                 </div>
             </div>
@@ -192,8 +193,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="track">
-                    <button class="button"><img src="images/location-img.png"></button>
+                <div id="track" class="track">
+                    <button class="button location-icon"><i class="fas fa-map-marker-alt"></i></button>
                     <a href="rider-report.html">VIEW</a>
                 </div>
             </div>
@@ -212,7 +213,7 @@
 
             <div class="main-page-content">
 
-                <img src="images/map-img.PNG" class="map">
+                <div id="map"></div>
 
             </div>
 
@@ -221,6 +222,94 @@
 
 
 
+        <script>
+            var markers = [
+              ['1', 6.4309, 3.4271],
+              ['2', 6.4698, 3.5852],
+              ['3', 6.5165, 3.2597],
+              ['4', 6.4238, 3.2936],
+              ['5', 6.5490, 3.4789],
+              ['6', 6.4553, 3.3641],
+              ['7', 6.4549, 3.4246],
+              ['8', 6.5626, 3.2433],
+              ['9', 6.6154, 3.3238],
+              ['10', 6.4659, 3.3198]
+            ];  
+
+            function initialize() {
+                
+              var center = {lat: 6.4309, lng: 3.4271},
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    disableDefaultUI: true,
+                    center: center,
+                    zoom: 11
+              });
+
+              var Markers = [];
+              
+              var iconNormal = 'images/m-small.png',
+                  iconSelected = 'images/m-big.png',
+                  bounds = new google.maps.LatLngBounds();
+              function setMarkers(map) {
+                for (var i = 0; i < markers.length; i++) {
+                  var marker = markers[i],
+                      myLatLng = new google.maps.LatLng(marker[1], marker[2]),
+                      eachMarker = new google.maps.Marker({
+                        record_id: i,
+                        position: myLatLng,
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        icon: iconNormal,
+                        title: marker[0]
+                  });
+                  //var selectedMarker;
+                  bounds.extend(myLatLng);
+                  Markers.push(eachMarker);
+
+                 /* google.maps.event.addListener(eachMarker,'click', function() {
+                    changeIcon(this);
+                  });
+
+                  function changeIcon(e){
+                    if (selectedMarker) {
+                      selectedMarker.setIcon(iconNormal);
+                    }
+                    e.setIcon(iconSelected);
+                    selectedMarker = e;
+                  }*/
+                  
+                  // choose from list
+                  $('#mySidenav .location-icon').on('click', function(){
+                    mapItem = $(this).index();
+                    changeMarker(mapItem);                             
+                    var thisLat = markers[mapItem] [1],
+                        thisLon = markers[mapItem] [2];
+                    map.panTo({lat: thisLat, lng: thisLon});
+                  });
+
+                  function changeMarker(record_id){
+                    for (i in Markers){
+                      Markers[i].setIcon(iconNormal);
+                      Markers[record_id].setIcon(iconSelected);
+                    }
+                  }
+                }
+              }
+              map.fitBounds(bounds);
+              setMarkers(map);
+
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+        <script>
+            $(function(){
+                $("#mySidenav .location-icon").click(function(){
+                    $("#mySidenav .location-icon").removeClass("marker-active");
+                    $(this).addClass("marker-active");
+                });
+            })
+        </script>
 
         <script>
             $(document).ready(function(){
