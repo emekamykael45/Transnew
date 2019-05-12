@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Send Me | Reports</title>
+        <title>Send Me | Settings</title>
         <link rel="icon" href="favicon.ico" />
         
         <!-- Bootstrap CSS CDN -->
@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/reports.css"/>
+        <link rel="stylesheet" href="css/settings.css"/>
         
         <!-- JS -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -43,7 +43,7 @@
                         <a href="overview.html" class="nav-link overview"><img>Overview</a>
                     </li>
                     <li class="nav-item">
-                        <a href="reports.html" class="nav-link reports active"><img>Reports</a>
+                        <a href="reports.html" class="nav-link reports"><img>Reports</a>
                     </li>
                     <li class="nav-item">
                         <a href="riders.html" class="nav-link riders"><img>Riders</a>
@@ -76,44 +76,84 @@
 
         <div class="main">
             
-            <p class="head-text">Reports</p>
+            <p class="head-text">Settings</p>
 
-            <div class="info-box">
-                <div class="box light">
-                    <p class="title">Total Business Reports</p>
-                    <p class="fig">10,000</p>
+            <div class="box">
+
+                <img src="images/account-img-circle.png">
+
+                <form class="ui form">
+                    <div class="first-row">
+                        <div class="field">
+                            <label>First Name</label>
+                            <input type="name" value="Tochukwu" placeholder="Enter name here" />
+                        </div>
+
+                        <div class="field">
+                            <label>Last Name</label>
+                            <input type="name" value="Onuchukwu" placeholder="Enter name here" />
+                        </div>
+
+                        <p class="change"><a class="change-btn">Change</a></p>
+                    </div>
+
+                    <hr>
+
+                    <div class="second-row">
+                        <div class="field">
+                            <label>Email</label>
+                            <input type="email" value="tochukwu.onuchukwu@gmail.com" placeholder="Enter email here" />
+                        </div>
+
+                        <p class="change"><a class="change-btn">Change</a></p>
+                    </div>
+
+                    <div class="second-row">
+                        <div class="field">
+                            <label>Password</label>
+                            <input type="password" value="password" placeholder="Enter password here" readonly />
+                        </div>
+
+                        <p class="change"><a class="change-btn" data-toggle="modal" data-target="#exampleModalCenter1">Change</a></p>
+                    </div>
+                </form>
+
+                <!--Modal Passeord Change-->
+                <div class="modal fade question" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span>Change Password</span>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <form class="ui form">
+                                    <div class="field">
+                                        <label>Password</label>
+                                        <input type="password" placeholder="Enter current password" />
+                                    </div>
+
+                                    <div class="field">
+                                        <label>New Password</label>
+                                        <input type="password" placeholder="Enter new password" />
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Confirm Password</label>
+                                        <input type="password" placeholder="Confirm new password" />
+                                    </div>
+
+                                    <button class="btn save-changes-btn">Save Changes</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="box dark">
-                    <p class="title">Today's Business Reports</p>
-                    <p class="fig">2,000</p>
-                </div>
-
-                <div class="box light">
-                    <p class="title">Total Operational Reports</p>
-                    <p class="fig">14,000</p>
-                </div>
-
-                <div class="box dark">
-                    <p class="title">Today's Operational Reports</p>
-                    <p class="fig">3,000</p>
-                </div>
-            </div>
-
-            <div class="cards">
-                <div class="card">
-                    <img src="images/suitcase-img.png">
-                    <p class="title">Business Reports</p>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
-                    <a href="business-reports.html">Open Reports</a>
-                </div>
-
-                <div class="card">
-                    <img src="images/operation-img.png">
-                    <p class="title">Operational Reports</p>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
-                    <a href="operational-reports.html">Open Reports</a>
-                </div>
             </div>
 
         </div>
