@@ -314,6 +314,9 @@ body {
 .main .filter-row .search input:focus {
     border: none !important;
 }
+.main .filter-row .search input::placeholder{
+    color: #9C9595;
+}
 
 .main .table-responsive {
     width: 100%;

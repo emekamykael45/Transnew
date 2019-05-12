@@ -290,6 +290,9 @@ body {
     border-bottom: 0.5px solid #787878;
     font-size: 1.05em;
 }
+.sticky-row .search-div input::placeholder{
+    color: #9C9595;
+}
 
 .sidenav .rider-row {
     padding: 25px 15px;

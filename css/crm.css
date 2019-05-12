@@ -348,6 +348,9 @@ body {
     border: none !important;
     border-bottom: 0.5px solid #787878 !important;
 }
+.main .filter-row .right input::placeholder{
+    color: #9C9595;
+}
 
 .main .table-responsive {
     width: 100%;

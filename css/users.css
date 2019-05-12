@@ -172,7 +172,7 @@ body {
     letter-spacing: 0.01em;
     color: #4B575C;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .modal.question .modal-header {
@@ -210,6 +210,10 @@ body {
 .modal.question .modal-body input:focus {
     border: none !important;
     border-bottom: 0.5px solid #6CB525 !important;
+}
+
+.modal.question .modal-body .field.first .dropdown {
+    width: 100%;
 }
 
 .modal.question .modal-footer {
@@ -323,6 +327,9 @@ body {
 .main .filter-row .search input:focus {
     border: none !important;
 }
+.main .filter-row .search input::placeholder{
+    color: #9C9595;
+}
 
 .main .new-rider {
     position: relative;
@@ -371,9 +378,13 @@ body {
     padding: 15px 20px;
 }
 
-.main .table tbody tr td.first-col img{
-    width: 30px;
-    height: 30px;
+.main .table tbody tr td.first-col .name{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 12px 10px;
+    color: #6CB525;
+    background: rgba(108, 181, 37, 0.1);
+    border-radius: 50%;
     margin-right: 10px;
 }
 

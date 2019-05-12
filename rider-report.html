@@ -78,7 +78,7 @@
         <div class="main">
             
             <div class="head">
-                <a href="riders.html"><img src="images/go-back-img.png"></a>
+                <a onclick="goBack()"><img src="images/go-back-img.png"></a>
                 <p class="head-text">Muve 01</p>
             </div>
 
@@ -341,7 +341,7 @@
                             <p class="muv-text">MUVE01</p>
                             <span>BN145HJI</span>
                         </div>
-                        <img src="images/location-img.png" class="img-end">
+                        <a href="tracker.html"><img src="images/location-img.png" class="img-end"></a>
                     </div>
 
                     <div class="second-row">
@@ -411,6 +411,13 @@
             $('.ui.accordion')
                 .accordion()
             ;
+        </script>
+
+        <!--Go Back-->
+        <script>
+            function goBack() {
+                window.history.back();
+            }
         </script>
 
         <!--Semantics Date Picker Script-->

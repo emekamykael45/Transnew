@@ -169,6 +169,7 @@ body {
 .main .head a {
     width: 30px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .main .head img {
@@ -233,6 +234,9 @@ body {
 }
 .main .filter-row .right input:focus {
     border: none !important;
+}
+.main .filter-row .right input::placeholder{
+    color: #9C9595;
 }
 
 .main .segment {
@@ -341,7 +345,7 @@ body {
 .accordian-body .drop-down-det{
     margin: 0;
     display: flex;
-    padding-left: 40px;
+    justify-content: center;
 }
 
 .inner{
