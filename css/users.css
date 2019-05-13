@@ -214,6 +214,15 @@ body {
 
 .modal.question .modal-body .field.first .dropdown {
     width: 100%;
+    border: none !important;
+    border-bottom: 1px solid #787878 !important;
+    border-radius: 0px;
+    padding-left: 8px;
+    padding-bottom: 13px;
+}
+.modal.question .modal-body .field.first .dropdown i {
+    float: right;
+    text-align: right;
 }
 
 .modal.question .modal-footer {

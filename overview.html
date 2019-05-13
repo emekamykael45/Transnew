@@ -169,7 +169,7 @@
                     <div class="tabs-div">
                         <div class="left">
                             
-                            <div id="container" class="graph">
+                            <div id="tab-two-graph" class="graph">
                                 
                             </div>
 
@@ -406,7 +406,7 @@
         <script>
             $.getJSON('https://www.highcharts.com/samples/data/aapl-c.json', function (data) {
                 // Create the chart
-                Highcharts.stockChart('container', {
+                Highcharts.stockChart('tab-two-graph', {
                 
                     chart: {
                         type: 'column'
@@ -456,58 +456,54 @@
 
         <!-- Tab3 Graph-->
         <script>
-            var colors = ['#0FB0F5'];
-            var options = {
-                chart: {
-                    height: 350,
-                    type: 'bar',
-                    events: {
-                        click: function(chart, w, e) {
-                            console.log(chart, w, e )
-                        }
+            $.getJSON('https://www.highcharts.com/samples/data/aapl-c.json', function (data) {
+                // Create the chart
+                Highcharts.stockChart('tab-three-graph', {
+                
+                    chart: {
+                        type: 'column'
                     },
-                    toolbar: {
-                    show: true,
-                    autoSelected: 'zoom' 
-                  },
-                },
-                yaxis: {
-                  title: {
-                    text: 'Distance covered',
-                    rotate: 90,
-                    offsetX: 0,
-                    offsetY: 0,
-                },
-                },
-                colors: colors,
-                plotOptions: {
-                    bar: {
-                        columnWidth: '50%',
-                        distributed: true
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                series: [{
-                    data: [25, 100, 200, 12, 100, 130, 5, 18, 50]
-                }],
-                xaxis: {
-                    categories: ['Jan 1', 'Jan 2', 'Jan 3', 'Jan 4', 'Jan 5', 'Jan 6', 'Jan 7', 'Jan 8', 'Jan 9'],
-                    labels: {
-                        style: {
-                            fontSize: '12px'
+
+                    navigator: {
+                        enabled: false
+                    },
+
+                    rangeSelector: {
+                        selected: 1
+                    },
+
+                    /**
+                    title: {
+                        text: 'AAPL Stock Price'
+                    },**/
+
+                    series: [{
+                        name: 'AAPL',
+                        data: data,
+                        tooltip: {
+                            valueDecimals: 2
                         }
-                    }
+                    }]
+
+                }, function (chart) {
+
+                    // apply the date pickers
+                    setTimeout(function () {
+                        $('input.highcharts-range-selector', $(chart.container).parent())
+                            .datepicker();
+                    }, 0);
+                });
+            });
+
+
+            // Set the datepicker's date format
+            $.datepicker.setDefaults({
+                dateFormat: 'yy-mm-dd',
+                onSelect: function () {
+                    this.onchange();
+                    this.onblur();
                 }
-            }
-
-            var chart = new ApexCharts(
-                document.querySelector("#tab-three-graph"),
-                options
-            );
-
-            chart.render();
+            });
         </script>
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
