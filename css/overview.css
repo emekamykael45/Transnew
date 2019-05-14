@@ -138,25 +138,28 @@ body {
 
 .navbar .mr-right .nav-item.dropdown i {
     color: #CCCFD4;
+    margin-left: 7px;
+    font-size: 0.8em;
 }
 
 .nav-item.dropdown .dropdown-menu {
     padding: 0;
 }
 
-.nav-item.dropdown .dropdown-menu hr {
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-
 .nav-item.dropdown .dropdown-menu .dropdown-item {
     padding: 8px 15px;
-    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
     background: transparent;
     color: #6CB525;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item img {
+    width: 20px;
+    margin-top: -2px;
+    margin-bottom: 1px;
 }
 
 

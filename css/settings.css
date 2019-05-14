@@ -140,6 +140,8 @@ body {
 
 .navbar .mr-right .nav-item.dropdown i {
     color: #CCCFD4;
+    margin-left: 7px;
+    font-size: 0.8em;
 }
 
 .nav-item.dropdown .dropdown-menu {
@@ -161,7 +163,6 @@ body {
     margin-top: -2px;
     margin-bottom: 1px;
 }
-
 
 .main {
     padding-bottom: 80px;
